@@ -1,0 +1,9 @@
+<div #textarea
+     contenteditable="true"
+     (input)="inputText($event)"
+     class="custom-textarea">
+  <app-word *ngFor="let word of words"
+            [text]="word"
+            (selected)="changeSelectedWord(word)">
+  </app-word>
+</div>

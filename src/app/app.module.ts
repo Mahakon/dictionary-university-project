@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {RewriterModule} from './rewriter/rewriter.module';
 import {RouterModule} from '@angular/router';
 import {ROUTES} from '../core/routes';
+import { CustomTextareaComponent } from '../common/components/custom-textarea/custom-textarea.component';
 
 @NgModule({
   declarations: [
