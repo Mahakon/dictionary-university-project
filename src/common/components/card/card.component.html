@@ -1,0 +1,10 @@
+<h2>{{word}}</h2>
+<h3>{{wordForm}}</h3>
+<ul class="list">
+  <li *ngFor="let item of items" (click)="choseItem(item)">
+    {{item.initial}}
+  </li>
+</ul>
+<h4 [hidden]="currentFlag">
+  Синонимы не найдены. <a #notFound target="_blank">Загуглить</a>
+</h4>

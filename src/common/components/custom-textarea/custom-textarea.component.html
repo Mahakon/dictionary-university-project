@@ -1,0 +1,7 @@
+<div #textarea
+     contenteditable="true"
+     class="custom-textarea">
+</div>
+<input [hidden]="true" #upload type="file" (change)="uploadFile($event)" multiple>
+<button class="download" (click)="downloadText()">Скачать</button>
+<button class="upload" (click)="uploadRef.nativeElement.click()">Загрузить</button>

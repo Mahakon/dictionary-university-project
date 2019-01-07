@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RewriterComponent } from './rewriter.component';
+import { CustomTextareaComponent } from './custom-textarea.component';
 
-describe('CardComponent', () => {
-  let component: RewriterComponent;
-  let fixture: ComponentFixture<RewriterComponent>;
+describe('CustomTextareaComponent', () => {
+  let component: CustomTextareaComponent;
+  let fixture: ComponentFixture<CustomTextareaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RewriterComponent ]
+      declarations: [ CustomTextareaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RewriterComponent);
+    fixture = TestBed.createComponent(CustomTextareaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
