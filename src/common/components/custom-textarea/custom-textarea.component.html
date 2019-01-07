@@ -1,9 +1,7 @@
 <div #textarea
      contenteditable="true"
-     (input)="inputText($event)"
      class="custom-textarea">
-  <app-word *ngFor="let word of words"
-            [text]="word"
-            (selected)="changeSelectedWord(word)">
-  </app-word>
 </div>
+<input [hidden]="true" #upload type="file" (change)="uploadFile($event)" multiple>
+<button class="download" (click)="downloadText()">Скачать</button>
+<button class="upload" (click)="uploadRef.nativeElement.click()">Загрузить</button>

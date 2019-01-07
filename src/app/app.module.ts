@@ -6,6 +6,8 @@ import {RewriterModule} from './rewriter/rewriter.module';
 import {RouterModule} from '@angular/router';
 import {ROUTES} from '../core/routes';
 import { CustomTextareaComponent } from '../common/components/custom-textarea/custom-textarea.component';
+import {ApiService} from '../common/services/api.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,10 @@ import { CustomTextareaComponent } from '../common/components/custom-textarea/cu
   imports: [
     BrowserModule,
     RewriterModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,8 +12,7 @@ export class WordComponent implements OnInit, OnDestroy {
 
   private onDestroy$ = new Subject<void>();
 
-  @HostListener('mousedown') click() {
-    debugger
+  @HostListener('mouseup') click() {
     this.selected.next(this.text);
   }
 
