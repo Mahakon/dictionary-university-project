@@ -21,7 +21,6 @@ import {IStatisticsWord, ISynonyms} from '../../common.entities';
   changeDetection: ChangeDetectionStrategy.Default
 })
 export class CardComponent implements OnInit, OnDestroy {
-  @ViewChild('notFound') notFoundRef: ElementRef;
   @Input() word = '';
   @Input() wordForm = '';
   @Input() items: ISynonyms[] = [];
@@ -38,14 +37,9 @@ export class CardComponent implements OnInit, OnDestroy {
 
   private onDestroy$ = new Subject<void>();
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private changeDetectorRef: ChangeDetectorRef
-  ) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.notFoundRef.nativeElement.setAttribute('href', this.googleHref);
-  }
+  ngOnInit() {}
 
   ngOnDestroy() {
     this.onDestroy$.next();
