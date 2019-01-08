@@ -1,6 +1,6 @@
 import {HttpHeaders} from '@angular/common/http';
 
-export const BACK_HOST = 'http://192.168.0.100:8080';
+export const BACK_HOST = 'https://rewriter-app.herokuapp.com';
 
 export const COMMON_OPTIONS = {
   headers: new HttpHeaders({
